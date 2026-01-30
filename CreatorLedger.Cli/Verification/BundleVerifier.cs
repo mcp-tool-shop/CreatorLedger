@@ -49,6 +49,17 @@ public sealed class BundleVerifier
                 Errors = [$"File not found: {bundlePath}"]
             };
         }
+        catch (DirectoryNotFoundException)
+        {
+            return new VerificationResult
+            {
+                Status = VerificationStatus.InvalidInput,
+                TrustLevel = "Error",
+                Reason = $"Proof bundle directory not found: {bundlePath}",
+                AssetId = "unknown",
+                Errors = [$"Directory not found: {bundlePath}"]
+            };
+        }
         catch (JsonException ex)
         {
             return new VerificationResult

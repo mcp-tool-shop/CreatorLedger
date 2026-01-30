@@ -1,4 +1,5 @@
 using System.Runtime.Versioning;
+using System.Security;
 using System.Security.Cryptography;
 using CreatorLedger.Domain.Identity;
 using CreatorLedger.Domain.Primitives;
@@ -148,6 +149,19 @@ public sealed class DpapiKeyVault : IKeyVault
     {
         // Sanitize creator ID for filename (GUIDs are safe, but be defensive)
         var filename = $"{creatorId}.bin";
-        return Path.Combine(_keysDirectory, filename);
+        var fullPath = Path.Combine(_keysDirectory, filename);
+        
+        // Prevent path traversal attacks by validating the resolved path
+        var normalizedPath = Path.GetFullPath(fullPath);
+        var normalizedDir = Path.GetFullPath(_keysDirectory);
+        
+        if (!normalizedPath.StartsWith(normalizedDir + Path.DirectorySeparatorChar, StringComparison.OrdinalIgnoreCase) &&
+            !normalizedPath.Equals(normalizedDir, StringComparison.OrdinalIgnoreCase))
+        {
+            throw new SecurityException(
+                $"Invalid key file path: path traversal detected for creator {creatorId}");
+        }
+        
+        return normalizedPath;
     }
 }

@@ -49,8 +49,8 @@ public sealed class SqliteLedgerRepository : ILedgerRepository
 
         try
         {
-            // 1. Read current tip (seq, event_hash)
-            var (currentSeq, currentTipHash) = GetCurrentTip(connection, transaction);
+            // 1. Read current tip (seq, event_hash, row_version)
+            var (currentSeq, currentTipHash, tipVersion) = GetCurrentTipWithVersion(connection, transaction);
 
             // 2. Verify event.PreviousEventHash matches tip
             if (ledgerEvent.PreviousEventHash != currentTipHash)
@@ -75,20 +75,19 @@ public sealed class SqliteLedgerRepository : ILedgerRepository
                 signature,
                 creatorPublicKey);
 
-            // 5. Insert event
-
+            // 5. Insert event with row_version = 1
             using var cmd = connection.CreateCommand();
             cmd.Transaction = transaction;
             cmd.CommandText = """
                 INSERT INTO ledger_events (
                     id, seq, event_type, occurred_at_utc, previous_event_hash,
                     event_hash, asset_id, payload_json, signature_base64,
-                    creator_id, creator_public_key, schema_version
+                    creator_id, creator_public_key, schema_version, row_version
                 )
                 VALUES (
                     @id, @seq, @eventType, @occurredAt, @prevHash,
                     @eventHash, @assetId, @payloadJson, @signature,
-                    @creatorId, @creatorPublicKey, @schemaVersion
+                    @creatorId, @creatorPublicKey, @schemaVersion, 1
                 )
                 """;
 
@@ -105,7 +104,15 @@ public sealed class SqliteLedgerRepository : ILedgerRepository
             cmd.Parameters.AddWithValue("@creatorPublicKey", creatorPublicKey ?? (object)DBNull.Value);
             cmd.Parameters.AddWithValue("@schemaVersion", EventPayloads.SchemaVersion);
 
-            cmd.ExecuteNonQuery();
+            var rowsAffected = cmd.ExecuteNonQuery();
+
+            // 6. Verify only one row was inserted (concurrency check)
+            if (rowsAffected != 1)
+            {
+                throw new InvalidOperationException(
+                    $"Concurrent append detected: expected 1 row inserted, got {rowsAffected}. " +
+                    "The ledger tip has changed. Please retry with the current tip.");
+            }
 
             transaction.Commit();
         }
@@ -193,10 +200,16 @@ public sealed class SqliteLedgerRepository : ILedgerRepository
 
     private static (long seq, Digest256 hash) GetCurrentTip(SqliteConnection connection, SqliteTransaction? transaction)
     {
+        var (seq, hash, _) = GetCurrentTipWithVersion(connection, transaction);
+        return (seq, hash);
+    }
+
+    private static (long seq, Digest256 hash, long version) GetCurrentTipWithVersion(SqliteConnection connection, SqliteTransaction? transaction)
+    {
         using var cmd = connection.CreateCommand();
         cmd.Transaction = transaction;
         cmd.CommandText = """
-            SELECT seq, event_hash
+            SELECT seq, event_hash, row_version
             FROM ledger_events
             ORDER BY seq DESC
             LIMIT 1
@@ -206,12 +219,13 @@ public sealed class SqliteLedgerRepository : ILedgerRepository
         if (!reader.Read())
         {
             // Empty ledger - genesis state
-            return (0, Digest256.Zero);
+            return (0, Digest256.Zero, 0);
         }
 
         var seq = reader.GetInt64(0);
         var hash = Digest256.Parse(reader.GetString(1));
-        return (seq, hash);
+        var version = reader.GetInt64(2);
+        return (seq, hash, version);
     }
 
     private async Task<(string payloadJson, string? signature, string? creatorId, string? creatorPublicKey, string? assetId)>

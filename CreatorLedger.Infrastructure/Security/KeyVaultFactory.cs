@@ -15,7 +15,7 @@ public static class KeyVaultFactory
     {
         /// <summary>
         /// Automatically select based on platform.
-        /// Windows: DPAPI, Other: In-memory with warning.
+        /// Windows: DPAPI, Linux: libsecret, macOS: Keychain.
         /// </summary>
         Auto,
 
@@ -23,6 +23,16 @@ public static class KeyVaultFactory
         /// Windows DPAPI-based vault. Only works on Windows.
         /// </summary>
         Dpapi,
+
+        /// <summary>
+        /// Linux libsecret vault (GNOME Keyring / KDE Wallet). Only works on Linux.
+        /// </summary>
+        LibSecret,
+
+        /// <summary>
+        /// macOS Keychain vault. Only works on macOS.
+        /// </summary>
+        Keychain,
 
         /// <summary>
         /// In-memory vault for development/testing.
@@ -36,12 +46,12 @@ public static class KeyVaultFactory
     /// </summary>
     /// <param name="vaultType">The type of vault to create.</param>
     /// <param name="baseDirectory">
-    /// Base directory for file-based vaults (DPAPI).
+    /// Base directory for file-based vaults (DPAPI only).
     /// If null, uses the default location (%LOCALAPPDATA%\CreatorLedger).
     /// </param>
     /// <returns>An IKeyVault implementation.</returns>
     /// <exception cref="PlatformNotSupportedException">
-    /// Thrown when DPAPI is requested on a non-Windows platform.
+    /// Thrown when a platform-specific vault is requested on an unsupported platform.
     /// </exception>
     public static IKeyVault Create(VaultType vaultType, string? baseDirectory = null)
     {
@@ -49,6 +59,8 @@ public static class KeyVaultFactory
         {
             VaultType.Auto => CreateAuto(baseDirectory),
             VaultType.Dpapi => CreateDpapi(baseDirectory),
+            VaultType.LibSecret => CreateLibSecret(),
+            VaultType.Keychain => CreateKeychain(),
             VaultType.InMemory => new InMemoryKeyVault(),
             _ => throw new ArgumentOutOfRangeException(nameof(vaultType))
         };
@@ -64,11 +76,30 @@ public static class KeyVaultFactory
             return CreateDpapi(baseDirectory);
         }
 
-        // Non-Windows: use in-memory vault with a warning
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+        {
+            try
+            {
+                return CreateLibSecret();
+            }
+            catch (PlatformNotSupportedException ex)
+            {
+                Console.Error.WriteLine(
+                    $"WARNING: {ex.Message}. " +
+                    "Falling back to in-memory vault - keys will NOT be persisted.");
+                return new InMemoryKeyVault();
+            }
+        }
+
+        if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+        {
+            return CreateKeychain();
+        }
+
+        // Unknown platform: use in-memory vault with a warning
         Console.Error.WriteLine(
-            "WARNING: Running on non-Windows platform. " +
-            "Using in-memory key vault - keys will NOT be persisted. " +
-            "For production on Windows, DPAPI will be used automatically.");
+            "WARNING: Unknown platform. " +
+            "Using in-memory key vault - keys will NOT be persisted.");
 
         return new InMemoryKeyVault();
     }
@@ -82,8 +113,8 @@ public static class KeyVaultFactory
         {
             throw new PlatformNotSupportedException(
                 "DPAPI key vault is only supported on Windows. " +
-                "On non-Windows platforms, use VaultType.InMemory for development/testing, " +
-                "or implement a platform-specific secure storage solution.");
+                "Use VaultType.LibSecret (Linux), VaultType.Keychain (macOS), " +
+                "or VaultType.InMemory for development/testing.");
         }
 
         if (baseDirectory is not null)
@@ -92,6 +123,38 @@ public static class KeyVaultFactory
         }
 
         return DpapiKeyVault.CreateDefault();
+    }
+
+    /// <summary>
+    /// Creates a libsecret vault (Linux). Throws on non-Linux or if libsecret-tools is not installed.
+    /// </summary>
+    private static IKeyVault CreateLibSecret()
+    {
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+        {
+            throw new PlatformNotSupportedException(
+                "libsecret key vault is only supported on Linux. " +
+                "Use VaultType.Dpapi (Windows), VaultType.Keychain (macOS), " +
+                "or VaultType.InMemory for development/testing.");
+        }
+
+        return new LibSecretKeyVault();
+    }
+
+    /// <summary>
+    /// Creates a Keychain vault (macOS). Throws on non-macOS.
+    /// </summary>
+    private static IKeyVault CreateKeychain()
+    {
+        if (!RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+        {
+            throw new PlatformNotSupportedException(
+                "Keychain key vault is only supported on macOS. " +
+                "Use VaultType.Dpapi (Windows), VaultType.LibSecret (Linux), " +
+                "or VaultType.InMemory for development/testing.");
+        }
+
+        return new KeychainKeyVault();
     }
 
     /// <summary>

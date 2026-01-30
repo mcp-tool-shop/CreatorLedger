@@ -6,16 +6,16 @@
     "Encoding": "UTF-8"
   },
   "ExportedAtUtc": "2024-06-15T12:00:00.0000000Z",
-  "AssetId": "0ee10df0-7fae-4c82-a28f-9ce56441a41b",
+  "AssetId": "703b866d-3d36-44e6-9b60-962707fbb63f",
   "Attestations": [
     {
-      "AttestationId": "b3b91558-d360-48cd-9966-781d308d7513",
-      "AssetId": "0ee10df0-7fae-4c82-a28f-9ce56441a41b",
+      "AttestationId": "906806a0-ec10-48c9-8321-ebae89276805",
+      "AssetId": "703b866d-3d36-44e6-9b60-962707fbb63f",
       "ContentHash": "0f70612ea7528c7383ae17cd9d56d4c4836635ee134ee9d86ee50b6a7c6eb006",
-      "CreatorId": "acb012db-8e11-4b6c-8c66-6b7ff872f212",
-      "CreatorPublicKey": "ed25519:LueiPLxs4A5QtKLEqPvryM/c\u002B9EGHLB4mK6gcNPqXTI=",
+      "CreatorId": "15c50015-328e-4b02-954d-9a3d82b8c110",
+      "CreatorPublicKey": "ed25519:6wlwtYyc1apgP2dSxqFTrpaN0wMQz4CGCFO2p/wYLBw=",
       "AttestedAtUtc": "2024-06-15T12:00:00.0000000Z",
-      "Signature": "5\u002Bv7zK1/CFeo0aPpYI1wDOvehgevlwGxKIB/vUnj/rcDsmDxMkD09yMkqBnz8\u002Bm21AuAGQceWFL0JlPCgS4kBg==",
+      "Signature": "LiUKxfxwBO/EquyxtJaQA0D3GSOLtH/TL9/ONc6fmdpwXQaJDCpWNhyf1kRoesyAfjHNwsBGjnwzkwMi2k7aDQ==",
       "DerivedFromAssetId": null,
       "DerivedFromAttestationId": null,
       "EventType": "asset_attested"
@@ -23,11 +23,11 @@
   ],
   "Creators": [
     {
-      "CreatorId": "acb012db-8e11-4b6c-8c66-6b7ff872f212",
-      "PublicKey": "ed25519:LueiPLxs4A5QtKLEqPvryM/c\u002B9EGHLB4mK6gcNPqXTI=",
+      "CreatorId": "15c50015-328e-4b02-954d-9a3d82b8c110",
+      "PublicKey": "ed25519:6wlwtYyc1apgP2dSxqFTrpaN0wMQz4CGCFO2p/wYLBw=",
       "DisplayName": "Demo Artist"
     }
   ],
   "Anchor": null,
-  "LedgerTipHash": "5ea87ed14b5b2277171d71cbae588b5bf7eb17585cd3e25066e23f9f229b40ac"
+  "LedgerTipHash": "0f32e46c13a4ef636e7894badfcb3b60e0ed96f1dd6bc1845e880b5b4af7b7c6"
 }

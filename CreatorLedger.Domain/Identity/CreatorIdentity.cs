@@ -75,6 +75,15 @@ public sealed class CreatorIdentity
         if (trimmed.Length > MaxDisplayNameLength)
             throw new DomainException($"DisplayName cannot exceed {MaxDisplayNameLength} characters");
 
+        // Validate characters: only alphanumeric, spaces, hyphens, underscores, and common punctuation
+        // This prevents control characters, path separators, and special symbols
+        if (!System.Text.RegularExpressions.Regex.IsMatch(trimmed, @"^[a-zA-Z0-9\s\-_.,!?()@]+$"))
+        {
+            throw new DomainException(
+                "DisplayName contains invalid characters. " +
+                "Only letters, numbers, spaces, and common punctuation (.,!?-_@()) are allowed.");
+        }
+
         return trimmed;
     }
 }
