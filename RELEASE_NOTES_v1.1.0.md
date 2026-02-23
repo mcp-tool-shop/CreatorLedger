@@ -67,7 +67,7 @@ All critical and high-severity issues resolved. System is now production-ready w
 ## Full Changelog
 
 ### Security
-- Added path traversal protection in DpapiKeyVault ([#1](https://github.com/mcp-tool-shop/CreatorLedger/commit/5d5135a))
+- Added path traversal protection in DpapiKeyVault ([#1](https://github.com/mcp-tool-shop-org/CreatorLedger/commit/5d5135a))
 - Implemented optimistic concurrency control for ledger appends
 - Added RFC 8032 Ed25519 test vectors
 - Strengthened display name validation with character whitelist
@@ -81,4 +81,4 @@ All critical and high-severity issues resolved. System is now production-ready w
 - 222 test cases, all passing
 - Added cryptographic standard compliance tests
 
-**Full Diff**: https://github.com/mcp-tool-shop/CreatorLedger/compare/f9d356d...5d5135a
+**Full Diff**: https://github.com/mcp-tool-shop-org/CreatorLedger/compare/f9d356d...5d5135a

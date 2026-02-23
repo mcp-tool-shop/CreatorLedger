@@ -1,4 +1,4 @@
-> ⚠️ **This repository has moved to [ledger-suite](https://github.com/mcp-tool-shop/ledger-suite)**
+> ⚠️ **This repository has moved to [ledger-suite](https://github.com/mcp-tool-shop-org/ledger-suite)**
 > Source now lives at: `src/CreatorLedger/`
 
 ---

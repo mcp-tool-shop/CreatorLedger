@@ -75,8 +75,8 @@ If you want to distribute the libraries via NuGet:
   <Authors>MCP Tool Shop</Authors>
   <Company>MCP Tool Shop</Company>
   <PackageLicenseExpression>MIT</PackageLicenseExpression>
-  <RepositoryUrl>https://github.com/mcp-tool-shop/CreatorLedger</RepositoryUrl>
-  <PackageProjectUrl>https://github.com/mcp-tool-shop/CreatorLedger</PackageProjectUrl>
+  <RepositoryUrl>https://github.com/mcp-tool-shop-org/CreatorLedger</RepositoryUrl>
+  <PackageProjectUrl>https://github.com/mcp-tool-shop-org/CreatorLedger</PackageProjectUrl>
   <Description>Cryptographic provenance for digital assets</Description>
   <PackageTags>cryptography;ed25519;blockchain;provenance;digital-assets</PackageTags>
 </PropertyGroup>
@@ -94,7 +94,7 @@ dotnet nuget push packages/*.nupkg --source https://api.nuget.org/v3/index.json 
 ## Distribution Channels
 
 ### Primary
-- ✅ **GitHub**: https://github.com/mcp-tool-shop/CreatorLedger
+- ✅ **GitHub**: https://github.com/mcp-tool-shop-org/CreatorLedger
 - ⏳ **GitHub Releases**: Binaries for win/linux/mac
 
 ### Optional
@@ -109,7 +109,7 @@ dotnet nuget push packages/*.nupkg --source https://api.nuget.org/v3/index.json 
 ### From GitHub Release (Recommended)
 ```bash
 # Download for your platform
-wget https://github.com/mcp-tool-shop/CreatorLedger/releases/download/v1.1.0/creatorledger-v1.1.0-linux-x64.tar.gz
+wget https://github.com/mcp-tool-shop-org/CreatorLedger/releases/download/v1.1.0/creatorledger-v1.1.0-linux-x64.tar.gz
 tar -xzf creatorledger-v1.1.0-linux-x64.tar.gz
 chmod +x creatorledger
 sudo mv creatorledger /usr/local/bin/
@@ -117,7 +117,7 @@ sudo mv creatorledger /usr/local/bin/
 
 ### From Source
 ```bash
-git clone https://github.com/mcp-tool-shop/CreatorLedger.git
+git clone https://github.com/mcp-tool-shop-org/CreatorLedger.git
 cd CreatorLedger
 dotnet publish CreatorLedger.Cli/CreatorLedger.Cli.csproj -c Release
 # Binary at: CreatorLedger.Cli/bin/Release/net8.0/publish/creatorledger
@@ -139,7 +139,7 @@ dotnet publish CreatorLedger.Cli/CreatorLedger.Cli.csproj -c Release
 
 Production-ready 5⭐ security!
 
-https://github.com/mcp-tool-shop/CreatorLedger
+https://github.com/mcp-tool-shop-org/CreatorLedger
 
 ### Hacker News Title
 CreatorLedger v1.1.0 – Local-first cryptographic provenance with Ed25519
