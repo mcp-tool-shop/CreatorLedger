@@ -1,11 +1,18 @@
-> ⚠️ **This repository has moved to [ledger-suite](https://github.com/mcp-tool-shop-org/ledger-suite)**
-> Source now lives at: `src/CreatorLedger/`
+<p align="center">
+  <img src="assets/logo.png" alt="CreatorLedger" width="200" />
+</p>
+
+<p align="center">
+  Local-first cryptographic provenance for digital assets.
+</p>
+
+<p align="center">
+  <a href="https://github.com/mcp-tool-shop-org/CreatorLedger/actions/workflows/ci.yml"><img src="https://github.com/mcp-tool-shop-org/CreatorLedger/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <a href="https://www.nuget.org/packages/CreatorLedger"><img src="https://img.shields.io/nuget/v/CreatorLedger" alt="NuGet" /></a>
+  <a href="https://github.com/mcp-tool-shop-org/CreatorLedger/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mcp-tool-shop-org/CreatorLedger" alt="License" /></a>
+</p>
 
 ---
-
-# CreatorLedger
-
-Local-first cryptographic provenance for digital assets.
 
 CreatorLedger proves **who created what, when** — with Ed25519 signatures, append-only event chains, and optional blockchain anchoring. No cloud required.
 
@@ -15,6 +22,18 @@ CreatorLedger proves **who created what, when** — with Ed25519 signatures, app
 - **Track derivation chains** — Know when work is derived from other work
 - **Export self-contained proofs** — JSON bundles that verify without any database
 - **Anchor to blockchain** — Optional timestamping for legal-grade evidence
+
+## Install
+
+```bash
+# As a .NET global tool (recommended)
+dotnet tool install --global CreatorLedger
+
+# Or build from source
+git clone https://github.com/mcp-tool-shop-org/CreatorLedger.git
+cd CreatorLedger
+dotnet publish CreatorLedger.Cli -c Release
+```
 
 ## Trust Levels
 
@@ -60,10 +79,10 @@ creatorledger inspect proof.json
 # Build
 dotnet build
 
-# Run tests
+# Run tests (222 tests)
 dotnet test
 
-# Build CLI
+# Build self-contained CLI
 dotnet publish CreatorLedger.Cli -c Release -r win-x64 --self-contained
 ```
 
@@ -71,37 +90,37 @@ dotnet publish CreatorLedger.Cli -c Release -r win-x64 --self-contained
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                     CreatorLedger.Cli                       │
-│                  (standalone verifier)                      │
+│                     CreatorLedger.Cli                        │
+│                  (standalone verifier)                       │
 └─────────────────────────────────────────────────────────────┘
                               │
 ┌─────────────────────────────────────────────────────────────┐
-│                  CreatorLedger.Application                  │
-│    CreateIdentity │ AttestAsset │ Verify │ Export │ Anchor │
+│                  CreatorLedger.Application                   │
+│    CreateIdentity │ AttestAsset │ Verify │ Export │ Anchor  │
 └─────────────────────────────────────────────────────────────┘
                               │
 ┌─────────────────────────────────────────────────────────────┐
-│                    CreatorLedger.Domain                     │
-│      CreatorIdentity │ AssetAttestation │ LedgerEvent       │
+│                    CreatorLedger.Domain                      │
+│      CreatorIdentity │ AssetAttestation │ LedgerEvent        │
 └─────────────────────────────────────────────────────────────┘
                               │
 ┌─────────────────────────────────────────────────────────────┐
-│                 CreatorLedger.Infrastructure                │
-│         SQLite (WAL) │ DPAPI KeyVault │ NullAnchor          │
+│                 CreatorLedger.Infrastructure                 │
+│    SQLite (WAL) │ DPAPI / libsecret / Keychain │ NullAnchor │
 └─────────────────────────────────────────────────────────────┘
                               │
 ┌─────────────────────────────────────────────────────────────┐
-│                       Shared.Crypto                         │
-│           Ed25519 │ SHA-256 │ Canonical JSON                │
+│                       Shared.Crypto                          │
+│           Ed25519 │ SHA-256 │ Canonical JSON                 │
 └─────────────────────────────────────────────────────────────┘
 ```
 
 ## Cryptographic Guarantees
 
-- **Signatures**: Ed25519 (RFC 8032)
+- **Signatures**: Ed25519 (RFC 8032) with official test vectors
 - **Hashing**: SHA-256 for content and event chain
 - **Serialization**: Canonical JSON (deterministic, UTF-8, no BOM)
-- **Key storage**: Windows DPAPI (CurrentUser scope)
+- **Key storage**: Cross-platform secure storage (see below)
 
 ## Event Chain
 
@@ -115,6 +134,7 @@ The chain is enforced by:
 - SQLite triggers (no UPDATE/DELETE)
 - `seq` ordering (not timestamps)
 - `PreviousEventHash` verification on append
+- Optimistic concurrency control via row versioning
 
 ## Proof Bundle Format
 
@@ -142,8 +162,20 @@ Self-contained JSON for offline verification:
 |-----------|---------|-------|-------|
 | CLI Verifier | ✅ | ✅ | ✅ |
 | Core Library | ✅ | ✅ | ✅ |
-| DPAPI KeyVault | ✅ | ❌ | ❌ |
+| Secure Key Storage | ✅ DPAPI | ✅ libsecret | ✅ Keychain |
 | InMemory KeyVault | ✅ | ✅ | ✅ |
+
+### Linux Requirements
+
+```bash
+# Install libsecret for secure key storage
+sudo apt install libsecret-tools  # Ubuntu/Debian
+sudo dnf install libsecret        # Fedora/RHEL
+```
+
+### macOS
+
+No additional dependencies — Keychain is built-in.
 
 ## License
 
@@ -151,12 +183,17 @@ MIT
 
 ## Status
 
-**v1.0** — Core functionality complete:
+**v1.1.1** — Security hardening + cross-platform:
 - ✅ Identity creation with Ed25519 key pairs
 - ✅ Asset attestation with signatures
 - ✅ Derivation tracking
 - ✅ Proof bundle export
 - ✅ Standalone CLI verifier
 - ✅ SQLite persistence with append-only enforcement
-- ✅ Anchoring abstraction (NullAnchor for testing)
+- ✅ Cross-platform secure key storage (DPAPI / libsecret / Keychain)
+- ✅ Path traversal protection
+- ✅ Optimistic concurrency control
+- ✅ RFC 8032 test vectors
+- ✅ 222 tests passing
+- ✅ NuGet package via Trusted Publishing
 - ⏳ Real blockchain adapter (Polygon planned)

@@ -19,6 +19,7 @@
     <RepositoryUrl>https://github.com/mcp-tool-shop-org/CreatorLedger</RepositoryUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
     <PackageTags>cryptography;provenance;attestation;digital-assets;ed25519;cli</PackageTags>
 
     <!-- dotnet tool configuration -->
@@ -28,6 +29,7 @@
 
   <ItemGroup>
     <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\assets\logo.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
