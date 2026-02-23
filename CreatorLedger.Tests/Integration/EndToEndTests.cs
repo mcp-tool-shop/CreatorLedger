@@ -1,4 +1,3 @@
-using System.Runtime.Versioning;
 using CreatorLedger.Application.Attestation;
 using CreatorLedger.Application.Export;
 using CreatorLedger.Application.Identity;
@@ -6,21 +5,19 @@ using CreatorLedger.Application.Signing;
 using CreatorLedger.Application.Verification;
 using CreatorLedger.Domain.Trust;
 using CreatorLedger.Domain.Primitives;
-using CreatorLedger.Infrastructure.Security;
+using CreatorLedger.Tests.Fakes;
 using Shared.Crypto;
 
 namespace CreatorLedger.Tests.Integration;
 
 /// <summary>
 /// End-to-end integration tests that prove the full system works together.
-/// These tests use real SQLite and DPAPI.
+/// These tests use real SQLite and an in-memory key vault.
 /// </summary>
-[SupportedOSPlatform("windows")]
 public class EndToEndTests : IDisposable
 {
     private readonly SqliteTestFixture _fixture;
-    private readonly string _tempKeyDir;
-    private readonly DpapiKeyVault _keyVault;
+    private readonly InMemoryKeyVault _keyVault;
 
     // Handlers
     private readonly CreateIdentityHandler _createIdentityHandler;
@@ -32,8 +29,7 @@ public class EndToEndTests : IDisposable
     public EndToEndTests()
     {
         _fixture = new SqliteTestFixture();
-        _tempKeyDir = Path.Combine(Path.GetTempPath(), $"e2e_keyvault_{Guid.NewGuid():N}");
-        _keyVault = new DpapiKeyVault(_tempKeyDir);
+        _keyVault = new InMemoryKeyVault();
 
         // Wire up handlers with real infrastructure
         _createIdentityHandler = new CreateIdentityHandler(
@@ -67,13 +63,6 @@ public class EndToEndTests : IDisposable
     public void Dispose()
     {
         _fixture.Dispose();
-
-        try
-        {
-            if (Directory.Exists(_tempKeyDir))
-                Directory.Delete(_tempKeyDir, recursive: true);
-        }
-        catch { }
     }
 
     [Fact]

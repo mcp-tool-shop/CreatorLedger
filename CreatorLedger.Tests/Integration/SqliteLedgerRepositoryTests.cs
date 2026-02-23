@@ -1,40 +1,28 @@
-using System.Runtime.Versioning;
 using CreatorLedger.Application.Attestation;
 using CreatorLedger.Application.Identity;
 using CreatorLedger.Application.Signing;
 using CreatorLedger.Domain.Identity;
 using CreatorLedger.Domain.Ledger.Events;
 using CreatorLedger.Domain.Primitives;
-using CreatorLedger.Infrastructure.Security;
+using CreatorLedger.Tests.Fakes;
 using Shared.Crypto;
 
 namespace CreatorLedger.Tests.Integration;
 
-[SupportedOSPlatform("windows")]
 public class SqliteLedgerRepositoryTests : IDisposable
 {
     private readonly SqliteTestFixture _fixture;
-    private readonly string _tempKeyDir;
-    private readonly DpapiKeyVault _keyVault;
+    private readonly InMemoryKeyVault _keyVault;
 
     public SqliteLedgerRepositoryTests()
     {
         _fixture = new SqliteTestFixture();
-        _tempKeyDir = Path.Combine(Path.GetTempPath(), $"keyvault_test_{Guid.NewGuid():N}");
-        _keyVault = new DpapiKeyVault(_tempKeyDir);
+        _keyVault = new InMemoryKeyVault();
     }
 
     public void Dispose()
     {
         _fixture.Dispose();
-
-        // Clean up key vault directory
-        try
-        {
-            if (Directory.Exists(_tempKeyDir))
-                Directory.Delete(_tempKeyDir, recursive: true);
-        }
-        catch { }
     }
 
     [Fact]

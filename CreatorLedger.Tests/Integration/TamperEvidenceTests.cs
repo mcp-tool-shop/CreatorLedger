@@ -1,4 +1,3 @@
-using System.Runtime.Versioning;
 using CreatorLedger.Application.Attestation;
 using CreatorLedger.Application.Export;
 using CreatorLedger.Application.Identity;
@@ -6,8 +5,7 @@ using CreatorLedger.Application.Signing;
 using CreatorLedger.Application.Verification;
 using CreatorLedger.Domain.Trust;
 using CreatorLedger.Domain.Primitives;
-using CreatorLedger.Infrastructure.Persistence;
-using CreatorLedger.Infrastructure.Security;
+using CreatorLedger.Tests.Fakes;
 using Microsoft.Data.Sqlite;
 using Shared.Crypto;
 
@@ -23,12 +21,10 @@ namespace CreatorLedger.Tests.Integration;
 /// - Attacker cannot forge Ed25519 signatures
 /// - System must detect any modification to payload_json
 /// </summary>
-[SupportedOSPlatform("windows")]
 public class TamperEvidenceTests : IDisposable
 {
     private readonly SqliteTestFixture _fixture;
-    private readonly string _tempKeyDir;
-    private readonly DpapiKeyVault _keyVault;
+    private readonly InMemoryKeyVault _keyVault;
 
     private readonly CreateIdentityHandler _createIdentityHandler;
     private readonly AttestAssetHandler _attestHandler;
@@ -38,8 +34,7 @@ public class TamperEvidenceTests : IDisposable
     public TamperEvidenceTests()
     {
         _fixture = new SqliteTestFixture();
-        _tempKeyDir = Path.Combine(Path.GetTempPath(), $"tamper_test_{Guid.NewGuid():N}");
-        _keyVault = new DpapiKeyVault(_tempKeyDir);
+        _keyVault = new InMemoryKeyVault();
 
         _createIdentityHandler = new CreateIdentityHandler(
             _keyVault,
@@ -66,13 +61,6 @@ public class TamperEvidenceTests : IDisposable
     public void Dispose()
     {
         _fixture.Dispose();
-
-        try
-        {
-            if (Directory.Exists(_tempKeyDir))
-                Directory.Delete(_tempKeyDir, recursive: true);
-        }
-        catch { }
     }
 
     /// <summary>
