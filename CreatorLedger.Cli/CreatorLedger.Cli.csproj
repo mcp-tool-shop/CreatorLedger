@@ -1,1 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
 
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>creatorledger</AssemblyName>
+    <RootNamespace>CreatorLedger.Cli</RootNamespace>
+
+    <!-- Package metadata -->
+    <PackageId>CreatorLedger</PackageId>
+    <Version>1.1.2</Version>
+    <Description>CreatorLedger CLI - Standalone verifier for digital asset attestation proofs with Ed25519 signatures.</Description>
+    <Authors>mcp-tool-shop</Authors>
+    <Company>MCP Tool Shop</Company>
+    <Copyright>Copyright (c) 2025-2026 MCP Tool Shop</Copyright>
+    <PackageProjectUrl>https://github.com/mcp-tool-shop-org/CreatorLedger</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/mcp-tool-shop-org/CreatorLedger</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageTags>cryptography;provenance;attestation;digital-assets;ed25519;cli</PackageTags>
+
+    <!-- dotnet tool configuration -->
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>creatorledger</ToolCommandName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\assets\logo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta4.22272.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared.Crypto\Shared.Crypto.csproj" />
+    <ProjectReference Include="..\CreatorLedger.Application\CreatorLedger.Application.csproj" />
+  </ItemGroup>
+
+</Project>
