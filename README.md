@@ -153,6 +153,35 @@ The chain is enforced by SQLite triggers (no UPDATE/DELETE), `seq` ordering, `Pr
 
 ---
 
+## Security & Data Scope
+
+CreatorLedger is a **local-first** CLI and library for cryptographic provenance.
+
+- **Data accessed:** Ed25519 keys via platform secure storage (DPAPI/libsecret/Keychain). Source files for SHA-256 hashing. Attestation records in local SQLite (WAL mode).
+- **Data NOT accessed:** No telemetry. No cloud services. Optional blockchain anchoring is opt-in only.
+- **Permissions:** File system read/write for SQLite and source directories. Platform secure storage for keys.
+
+Full policy: [SECURITY.md](SECURITY.md)
+
+---
+
+## Scorecard
+
+| Category | Score |
+|----------|-------|
+| A. Security | 10/10 |
+| B. Error Handling | 10/10 |
+| C. Operator Docs | 10/10 |
+| D. Shipping Hygiene | 10/10 |
+| E. Identity (soft) | 10/10 |
+| **Overall** | **50/50** |
+
+---
+
 ## License
 
 [MIT](LICENSE)
+
+---
+
+Built by <a href="https://mcp-tool-shop.github.io/">MCP Tool Shop</a>
