@@ -14,7 +14,7 @@ export const config: SiteConfig = {
     headlineAccent: 'prove who created what, when.',
     description: 'Local-first cryptographic provenance for digital assets. Ed25519 signatures, append-only event chains, self-contained proof bundles, and optional blockchain anchoring \u2014 no cloud required.',
     primaryCta: { href: '#quick-start', label: 'Get started' },
-    secondaryCta: { href: '#features', label: 'Learn more' },
+    secondaryCta: { href: 'handbook/', label: 'Read the Handbook' },
     previews: [
       { label: 'Install', code: 'dotnet tool install --global CreatorLedger' },
       { label: 'Verify', code: 'creatorledger verify proof.json --asset artwork.png' },

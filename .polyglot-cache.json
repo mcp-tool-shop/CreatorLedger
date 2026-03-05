@@ -1,0 +1,1930 @@
+{
+  "version": 1,
+  "entries": {
+    "21b37408f2299592": {
+      "translation": "**デジタル資産のための、ローカル環境に最適化された暗号学的トレーサビリティ。** 誰が何を作成したのか、いつ作成したのかを、Ed25519署名、追記専用のイベントチェーン、およびオプションのブロックチェーン連携によって証明します。 クラウド環境は不要です。",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "8b823a4b9bbe012a": {
+      "translation": "機能",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "5d3de34f0c6026bc": {
+      "translation": "- **資産をローカルで署名**：作成者のIDと紐付けられたEd25519署名\n- **派生チェーンを追跡**：他の作品から派生した作品であるかどうかを把握\n- **自己完結型の証明をエクスポート**：データベースなしで検証可能なJSON形式のデータ\n- **ブロックチェーンに連携**：法的証拠として利用できるタイムスタンプの付与（オプション）",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "ea65604e8b784581": {
+      "translation": "インストール",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "a717782dcd8cabf4": {
+      "translation": "信頼レベル",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "f2a2688b41dcaed2": {
+      "translation": "レベル",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "58123bdea582f8e2": {
+      "translation": "意味",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "59196af31abc0d4d": {
+      "translation": "-------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "2a56d6ea96d9fd14": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "958018a67e7c2a63": {
+      "translation": "ブロックチェーンに署名済みで連携済み",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "af09fde9f0eb86b8": {
+      "translation": "署名あり、まだブロックチェーンに連携されていない",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "d6245e8003469116": {
+      "translation": "別の署名済み作品から派生した作品",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "63fdd67778d5fb91": {
+      "translation": "認証情報が見つからない",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "544fe2952ad7fe15": {
+      "translation": "署名が無効、またはコンテンツが改ざんされている",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "fc64b090807d039e": {
+      "translation": "CLI検証ツール",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "0637f5172eb53ca9": {
+      "translation": "インフラストラクチャなしで証明データを検証します。",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "2e22400e9cbba1b8": {
+      "translation": "終了コード",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "0172dfc28d41fb5e": {
+      "translation": "コード",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "8105677e590065e2": {
+      "translation": "ステータス",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "0c67d1b6fb677384": {
+      "translation": "スクリプトでの利用",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "69e70b451ff65bf9": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "9d7cee119080e668": {
+      "translation": "--------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "3be19a5341883847": {
+      "translation": "----------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "8f1a6fac84dee034": {
+      "translation": "検証済み",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "0e35c22232c7f19c": {
+      "translation": "未検証",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "073ad3689f44b536": {
+      "translation": "構造的に有効だが、検証できない",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "3efec1dbd8e4d778": {
+      "translation": "エラー",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "dff3c80e48752c02": {
+      "translation": "改ざんが検出された",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "b6ad4ec3cdd9ff7b": {
+      "translation": "入力が無効",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "54aeb0757371ab86": {
+      "translation": "JSON形式が不正、またはバージョンが間違っている",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "5057ef787f7bb97d": {
+      "translation": "エラー",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "8e6e23414bec2962": {
+      "translation": "実行時エラー",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "d182d24c54cc50a7": {
+      "translation": "クイックスタート",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "7b1fedad86f33fe3": {
+      "translation": "アーキテクチャ",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "506cba2c2a93cc2b": {
+      "translation": "暗号学的保証",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "ea11fa62dd294fa5": {
+      "translation": "- **署名**: Ed25519 (RFC 8032) (公式のテストベクトル付き)\n- **ハッシュ**: コンテンツとイベントチェーンに対してSHA-256を使用\n- **シリアライゼーション**: カノニカルJSON (決定論的、UTF-8、BOMなし)\n- **キーの保存**: クロスプラットフォーム対応のセキュアストレージ (DPAPI / libsecret / Keychain)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "f9c09ffad0fdd96b": {
+      "translation": "イベントチェーン",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "eb26575929ee81de": {
+      "translation": "イベントは、追記専用のチェーンを形成し、各イベントには前のイベントのハッシュが含まれます。",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "78eaebe2753cfc1d": {
+      "translation": "このチェーンは、SQLiteトリガー（UPDATE/DELETE不可）、`seq`の順序、`PreviousEventHash`の検証、および楽観的な同時実行制御によって強制されます。",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "3992430b9a1a3599": {
+      "translation": "プラットフォームのサポート",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "8d7b4c5455a25691": {
+      "translation": "コンポーネント",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "40631d20ca511a93": {
+      "translation": "Windows",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "72708717c87d1984": {
+      "translation": "Linux",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "2813a0743aa338ad": {
+      "translation": "macOS",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "5267a4e52ef1849b": {
+      "translation": "-----------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "a52a6072fe35c3a2": {
+      "translation": "はい",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "cd7d70d3b1e4d64d": {
+      "translation": "コアライブラリ",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "596ead74c55f5359": {
+      "translation": "セキュアキーストレージ",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "838f3a9e44b7866f": {
+      "translation": "DPAPI",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "689ca46cc43f7fda": {
+      "translation": "libsecret",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "c8b00f0b85cd6176": {
+      "translation": "Keychain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "80f80f9b2d0ddf56": {
+      "translation": "ドキュメント",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "0fe766c271832c50": {
+      "translation": "- [VERIFICATION.md](VERIFICATION.md) — 検証ガイド\n- [SECURITY_IMPROVEMENTS.md](SECURITY_IMPROVEMENTS.md) — セキュリティ強化の詳細\n- [PUBLISHING_GUIDE.md](PUBLISHING_GUIDE.md) — NuGet公開\n- [RELEASE_NOTES_v1.1.0.md](RELEASE_NOTES_v1.1.0.md) — リリースノート",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "08ea9dfbe36d981b": {
+      "translation": "ライセンス",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "5e7c5653fc3efae7": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089058023
+    },
+    "5b69b508a0e306c4": {
+      "translation": "**用于数字资产的本地加密溯源。证明是谁创建了什么，以及何时创建——使用 Ed25519 签名、只追加事件链，以及可选的区块链锚定。无需云服务。**",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "1205c30fa0dcd4eb": {
+      "translation": "功能",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "637c12d6b55a22a5": {
+      "translation": "- **本地签名资产** — 与创作者身份关联的 Ed25519 签名\n- **跟踪衍生链** — 了解作品是否是从其他作品衍生而来\n- **导出自包含证明** — 验证无需任何数据库即可使用的 JSON 捆绑包\n- **锚定到区块链** — 可选的时间戳，用于提供具有法律效力的证据",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "ed61d0d109031128": {
+      "translation": "安装",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "52f0a8ac10f5371f": {
+      "translation": "信任级别",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "806c57fb03255901": {
+      "translation": "级别",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "d92f14b6efff6a75": {
+      "translation": "含义",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "d75d743091909926": {
+      "translation": "-------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "3c50ad19fc6c359b": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "7993a0a94fb02765": {
+      "translation": "已签名 + 锚定到区块链",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "b32157413d99f962": {
+      "translation": "签名有效，但尚未锚定",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "ab62c1bbee7700d3": {
+      "translation": "已签名，作品是从另一个已签名作品衍生而来",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "1efdea336fe4432d": {
+      "translation": "未找到任何证明",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "f879943c6b0042be": {
+      "translation": "签名无效或内容已修改",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "6c502f7d147dfe50": {
+      "translation": "命令行验证器",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "1a558d31a67cd273": {
+      "translation": "无需任何基础设施即可验证证明捆绑包：",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "7a04b47e3bc57a61": {
+      "translation": "退出码",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "3f9ac56f7c622676": {
+      "translation": "代码",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "32267c3a5dcfbc50": {
+      "translation": "状态",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "2e1867b6ba4e55e3": {
+      "translation": "在脚本中使用",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "7b7596c3d1d0c899": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "15d90ade51a88a14": {
+      "translation": "--------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "affc57d393c56577": {
+      "translation": "----------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "9e7c4df2cea470be": {
+      "translation": "已验证",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "e3f67d5f298abe81": {
+      "translation": "未验证",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "1318dfbda8b3e5d5": {
+      "translation": "结构有效，但无法验证",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "fd5b0a8001f14aed": {
+      "translation": "损坏",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "1c0f57047aec3e1c": {
+      "translation": "检测到篡改",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "7954f0020bfc3601": {
+      "translation": "无效输入",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "7c5067e05742fe19": {
+      "translation": "JSON 格式错误，版本错误",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "f01d5adb22cd7540": {
+      "translation": "错误",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "d881309acbe7d2ea": {
+      "translation": "运行时错误",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "3e6394397900eaa1": {
+      "translation": "快速入门",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "ec8506a5dbb06220": {
+      "translation": "架构",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "68a580b9a9e32a64": {
+      "translation": "加密保证",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "81d24eefcbcc0c3c": {
+      "translation": "- **签名**：使用官方测试向量的 Ed25519 (RFC 8032)\n- **哈希**：用于内容和事件链的 SHA-256\n- **序列化**：规范 JSON (确定性，UTF-8，无 BOM)\n- **密钥存储**：跨平台安全存储 (DPAPI / libsecret / Keychain)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "5e9c0d38abfc9f2b": {
+      "translation": "事件链",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "7171a4056361ac4d": {
+      "translation": "事件形成一个只追加的链，每个事件都包含前一个事件的哈希：",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "2d4f15eb5d4dc067": {
+      "translation": "该链由 SQLite 触发器（不支持 UPDATE/DELETE）、`seq` 顺序、`PreviousEventHash` 验证以及乐观并发控制强制执行。",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "738b135220d643c6": {
+      "translation": "平台支持",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "2431cbeb7340b69e": {
+      "translation": "组件",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "c789910dd6e2de32": {
+      "translation": "Windows",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "b761c9e8d04684c8": {
+      "translation": "Linux",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "daa6a0557c4f5e82": {
+      "translation": "macOS",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "10198921144da1d7": {
+      "translation": "-----------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "f1d986f6cbc54b78": {
+      "translation": "是",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "df0869355a84f7b4": {
+      "translation": "核心库",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088597
+    },
+    "77615ba0017b882a": {
+      "translation": "安全密钥存储",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088598
+    },
+    "b820af13ab9d5927": {
+      "translation": "DPAPI",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088598
+    },
+    "99c768d9697389fb": {
+      "translation": "libsecret",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088598
+    },
+    "581aff9fdf181e22": {
+      "translation": "Keychain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088598
+    },
+    "250492556e6757d7": {
+      "translation": "文档",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088598
+    },
+    "c472924fc1c42144": {
+      "translation": "- [VERIFICATION.md](VERIFICATION.md) — 验证指南\n- [SECURITY_IMPROVEMENTS.md](SECURITY_IMPROVEMENTS.md) — 安全加固细节\n- [PUBLISHING_GUIDE.md](PUBLISHING_GUIDE.md) — NuGet 发布\n- [RELEASE_NOTES_v1.1.0.md](RELEASE_NOTES_v1.1.0.md) — 发布说明",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088598
+    },
+    "1fb815b9a436fadb": {
+      "translation": "许可证",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088598
+    },
+    "892c2aa834c19cc2": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089088598
+    },
+    "315a63cc9382fdce": {
+      "translation": "**Trazabilidad criptográfica local para activos digitales. Demuestra quién creó qué y cuándo, con firmas Ed25519, cadenas de eventos de solo escritura y anclaje opcional a la cadena de bloques. No se requiere conexión a la nube.**",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "ae17127862c8bc41": {
+      "translation": "¿Qué hace?",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "f4f01e10ae1db264": {
+      "translation": "- **Firma los activos localmente:** Firmas Ed25519 vinculadas a la identidad del creador.\n- **Realiza un seguimiento de las cadenas de derivación:** Averigua cuándo un trabajo se deriva de otro.\n- **Exporta pruebas autocontenidas:** Paquetes JSON que verifican sin necesidad de una base de datos.\n- **Ancla a la cadena de bloques:** Sello de tiempo opcional para evidencia de calidad legal.",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "144b06b61516beec": {
+      "translation": "Instalación",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "8712312d8f042fb4": {
+      "translation": "Niveles de confianza",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "543d749fb53aae4c": {
+      "translation": "Nivel",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "a9e0b03a532423f7": {
+      "translation": "Significado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "58e46b91ebfb210e": {
+      "translation": "-------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "f2088caa76d4a948": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "cde9443389221e3b": {
+      "translation": "Firmado y anclado a la cadena de bloques",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "5579b454f5e42e72": {
+      "translation": "Firma válida, pero aún no anclada",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "e28135f1d4a76d0d": {
+      "translation": "Trabajo firmado derivado de otro trabajo firmado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "5174ce7a32242a90": {
+      "translation": "No se encontró ninguna certificación",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "73eb4d307973a628": {
+      "translation": "Firma inválida o contenido modificado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "63477ec5a0ccf9d3": {
+      "translation": "Verificador de línea de comandos (CLI)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "075eaa94ff3b9677": {
+      "translation": "Verifica paquetes de pruebas sin ninguna infraestructura:",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "ead6d0852bab11de": {
+      "translation": "Códigos de salida",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "fa75f962a3192fe3": {
+      "translation": "Código",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "bc143d1ce1653d6a": {
+      "translation": "Estado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "5f7558d53f529b68": {
+      "translation": "Uso en scripts",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "4110d0f8faecdeab": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "eeb36bd7b5ceedf9": {
+      "translation": "--------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "aeb0520189fa5548": {
+      "translation": "----------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "75bc0ed9a6259bdb": {
+      "translation": "Verificado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "a9753f7c52d373fb": {
+      "translation": "No verificado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "f025729a173d7715": {
+      "translation": "Estructuralmente válido, no se puede verificar",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "315d438d03e909ab": {
+      "translation": "Corrupto",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "4728764aee6c2f95": {
+      "translation": "Se detectó manipulación",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "a40e1fa085735bd2": {
+      "translation": "Entrada inválida",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "882fe37fe8afd5c4": {
+      "translation": "JSON incorrecto, versión incorrecta",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "94b0317a443a8dec": {
+      "translation": "Error",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "4e4357522c05ff3f": {
+      "translation": "Fallo en tiempo de ejecución",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "785321ff8279266b": {
+      "translation": "Guía de inicio rápido",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "020594f2ddb90222": {
+      "translation": "Arquitectura",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "d1b5f0b00135a043": {
+      "translation": "Garantías criptográficas",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "0fe9ebdfd1a595f7": {
+      "translation": "- **Firmas:** Ed25519 (RFC 8032) con vectores de prueba oficiales.\n- **Hashing:** SHA-256 para contenido y cadena de eventos.\n- **Serialización:** JSON canónico (determinista, UTF-8, sin BOM).\n- **Almacenamiento de claves:** Almacenamiento seguro multiplataforma (DPAPI / libsecret / Keychain).",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "146b9cdd20ad8e58": {
+      "translation": "Cadena de eventos",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "37b186cd2dd8f698": {
+      "translation": "Los eventos forman una cadena de solo escritura donde cada evento incluye el hash del evento anterior:",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "d311f67fb04be7a2": {
+      "translation": "La cadena se impone mediante disparadores de SQLite (sin UPDATE/DELETE), ordenamiento `seq`, verificación `PreviousEventHash` y control de concurrencia optimista.",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "3a1b7a7c91871e34": {
+      "translation": "Soporte de plataforma",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "3f330cf8a5597c77": {
+      "translation": "Componente",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "dc616e302bc5bf7a": {
+      "translation": "Windows",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "4396a35494fa2cab": {
+      "translation": "Linux",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "3339b1705f07cb69": {
+      "translation": "macOS",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "8d960fb67d9cab35": {
+      "translation": "-----------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "8dad81536e6a0bdc": {
+      "translation": "Sí",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "805bf9965adb6a09": {
+      "translation": "Biblioteca central",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "4980f6e158af9dca": {
+      "translation": "Almacenamiento de claves seguro",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "6bc10ee5be2febf0": {
+      "translation": "DPAPI",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "36c3aa37c79de238": {
+      "translation": "libsecret",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "6b3dffabc64df794": {
+      "translation": "Keychain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "00cab4713b0edf9d": {
+      "translation": "Documentación",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "cba78092a9d0b59e": {
+      "translation": "- [VERIFICATION.md](VERIFICATION.md) — Guía de verificación\n- [SECURITY_IMPROVEMENTS.md](SECURITY_IMPROVEMENTS.md) — Detalles de endurecimiento de seguridad\n- [PUBLISHING_GUIDE.md](PUBLISHING_GUIDE.md) — Publicación en NuGet\n- [RELEASE_NOTES_v1.1.0.md](RELEASE_NOTES_v1.1.0.md) — Notas de la versión",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "9572f74b6d3f62b1": {
+      "translation": "Licencia",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "e4731ea7699353e4": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089122538
+    },
+    "71c86cc9bf2ee793": {
+      "translation": "**Traçabilité cryptographique locale pour les actifs numériques. Permet de prouver qui a créé quoi et quand, grâce aux signatures Ed25519, aux chaînes d'événements en append-only (uniquement en ajout) et à l'ancrage optionnel sur une blockchain. Pas de cloud requis.**",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "d041bf8cfafd448a": {
+      "translation": "Ce que cela fait",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "53886e8ae3975f86": {
+      "translation": "- **Signature des actifs localement** — Signatures Ed25519 liées à l'identité du créateur.\n- **Suivi des chaînes de dérivation** — Permet de savoir quand un travail est dérivé d'un autre.\n- **Exportation de preuves autonomes** — Fichiers JSON qui permettent la vérification sans base de données.\n- **Ancrage à la blockchain** — Possibilité de créer des horodatages pour des preuves juridiquement valables.",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "6c946ac8441b05e9": {
+      "translation": "Installation",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "ea51f00da632001c": {
+      "translation": "Niveaux de confiance",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "16a9b370a3f784d6": {
+      "translation": "Niveau",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "785c7a450a789477": {
+      "translation": "Signification",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "b8a31ebdae787756": {
+      "translation": "-------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "9c7087410e6c6801": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "baf9911f1e47aee9": {
+      "translation": "Signature ajoutée et ancrée à la blockchain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "630037017014de8c": {
+      "translation": "Signature valide, mais pas encore ancrée",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "23322b19891a0e45": {
+      "translation": "Travail signé dérivé d'un autre travail signé",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "57a0174099e7aaa0": {
+      "translation": "Aucune attestation trouvée",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "99b1956662e85e5a": {
+      "translation": "Signature invalide ou contenu modifié",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "6e3b2d9d2b49c897": {
+      "translation": "CLI Verifier",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "c31fbb08156476ca": {
+      "translation": "Vérifiez les ensembles de preuves sans aucune infrastructure :",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "ea3b5c49e509bd45": {
+      "translation": "Codes de sortie",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "72167cb201a1755d": {
+      "translation": "Code",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "a28b1903efedd58a": {
+      "translation": "Statut",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "abeac36d8bb63db0": {
+      "translation": "Utilisation dans les scripts",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "86d5118e773cafab": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "f4a92f03e0709542": {
+      "translation": "--------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "c7404788bb348ff9": {
+      "translation": "----------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "3243be9ec04a6b2c": {
+      "translation": "Vérifié",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "249b3a0dbb35afe7": {
+      "translation": "Non vérifié",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "8c1ef7c40352384d": {
+      "translation": "Structure valide, impossible de vérifier",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "8d78c92ababb9e93": {
+      "translation": "Corrompu",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "aa4e03f991f9afd9": {
+      "translation": "Altération détectée",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "f33b0e31833f0de3": {
+      "translation": "Entrée invalide",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "3f2a096102dd6d79": {
+      "translation": "JSON incorrect, mauvaise version",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "718fc8f22fbca45a": {
+      "translation": "Erreur",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "88226aa68c6811fb": {
+      "translation": "Erreur d'exécution",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "caef1b750e85e405": {
+      "translation": "Démarrage rapide",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "2ced690b13b08b76": {
+      "translation": "Architecture",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "9920092d4e6383e0": {
+      "translation": "Garanties cryptographiques",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "400ede8cd4f3dfff": {
+      "translation": "- **Signatures**: Ed25519 (RFC 8032) avec vecteurs de test officiels.\n- **Hachage**: SHA-256 pour le contenu et la chaîne d'événements.\n- **Sérialisation**: JSON canonique (déterministe, UTF-8, sans BOM).\n- **Stockage des clés**: Stockage sécurisé multiplateforme (DPAPI / libsecret / Keychain).",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "660b597e2ebf1270": {
+      "translation": "Chaîne d'événements",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "683b77b0c8a023b2": {
+      "translation": "Les événements forment une chaîne en append-only où chaque événement inclut le hachage de l'événement précédent :",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "5696bfa59a66ad39": {
+      "translation": "La chaîne est appliquée par des déclencheurs SQLite (pas de UPDATE/DELETE), l'ordre de `seq`, la vérification de `PreviousEventHash` et le contrôle de concurrence optimiste.",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "5c720ac16de7170f": {
+      "translation": "Prise en charge des plateformes",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "25a36f97495e0ab0": {
+      "translation": "Composant",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "7f2d4fcdbd5152db": {
+      "translation": "Windows",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "78c6253ab4225114": {
+      "translation": "Linux",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "dc7504a6c361be30": {
+      "translation": "macOS",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "d342ebe446ad84bf": {
+      "translation": "-----------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "2b7942b1f9c72be7": {
+      "translation": "Oui",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "364435af21936357": {
+      "translation": "Bibliothèque de base",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "4c906de70b7d0cb3": {
+      "translation": "Stockage sécurisé des clés",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "34651af8b6ed8216": {
+      "translation": "DPAPI",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "0dd2bfe26ea92096": {
+      "translation": "libsecret",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "884a4459c60382c6": {
+      "translation": "Keychain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "dd09f1b81c3f6ef5": {
+      "translation": "Documentation",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "618d78bf846b935c": {
+      "translation": "- [VERIFICATION.md](VERIFICATION.md) — Guide de vérification\n- [SECURITY_IMPROVEMENTS.md](SECURITY_IMPROVEMENTS.md) — Détails des améliorations de sécurité\n- [PUBLISHING_GUIDE.md](PUBLISHING_GUIDE.md) — Publication NuGet\n- [RELEASE_NOTES_v1.1.0.md](RELEASE_NOTES_v1.1.0.md) — Notes de version",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "0174ffc9d6992c72": {
+      "translation": "Licence",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "c19c2b7dfc530297": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089157270
+    },
+    "e6798c0c93c69abc": {
+      "translation": "**डिजिटल संपत्तियों के लिए स्थानीय-आधारित क्रिप्टोग्राफिक प्रमाणिकता।** यह प्रमाणित करता है कि किसने क्या बनाया, कब — Ed25519 हस्ताक्षर, केवल जोड़ने योग्य इवेंट श्रृंखलाओं और वैकल्पिक ब्लॉकचेन एकीकरण के साथ। इसके लिए किसी क्लाउड की आवश्यकता नहीं है।",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "8a62aaf44e492faf": {
+      "translation": "यह क्या करता है",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "68f6be2c8d4fac25": {
+      "translation": "- **स्थानीय रूप से संपत्तियों पर हस्ताक्षर करें** — Ed25519 हस्ताक्षर जो निर्माता की पहचान से जुड़े होते हैं।\n- **उत्पत्ति श्रृंखलाओं को ट्रैक करें** — जानें कि कोई कार्य अन्य कार्यों से कैसे प्राप्त किया गया है।\n- **स्वयं-निहित प्रमाणों का निर्यात करें** — JSON बंडल जो किसी भी डेटाबेस के बिना सत्यापन करते हैं।\n- **ब्लॉकचेन से जोड़ें** — कानूनी-ग्रेड प्रमाण के लिए वैकल्पिक टाइमस्टैम्पिंग।",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "7670bd721a08293f": {
+      "translation": "इंस्टॉल करें",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "f66c771466a86743": {
+      "translation": "विश्वसनीयता स्तर",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "d3494ccda41800e8": {
+      "translation": "स्तर",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "8e6cc4fa69314024": {
+      "translation": "अर्थ",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "6da5100c388f6595": {
+      "translation": "-------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "1a20fc4dc8ce3304": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "9f55e25635707096": {
+      "translation": "हस्ताक्षरित + ब्लॉकचेन से जुड़ा हुआ",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "37881115bb4fdab9": {
+      "translation": "मान्य हस्ताक्षर, अभी तक ब्लॉकचेन से नहीं जोड़ा गया",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "d5408e50c5068b8e": {
+      "translation": "एक अन्य हस्ताक्षरित कार्य से प्राप्त कार्य पर हस्ताक्षर किया गया",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "bef03783a5f2fb84": {
+      "translation": "कोई प्रमाण नहीं मिला",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "466197967b5306d9": {
+      "translation": "हस्ताक्षर अमान्य है या सामग्री में बदलाव किया गया है",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "7393430c9c6a6157": {
+      "translation": "CLI सत्यापनकर्ता",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "9daff5ea112f469c": {
+      "translation": "किसी भी बुनियादी ढांचे के बिना प्रमाण बंडलों को सत्यापित करें:",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "92abed1747d9195a": {
+      "translation": "एग्जिट कोड",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "285fee1112e43bbf": {
+      "translation": "कोड",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "eaa53e354428ae45": {
+      "translation": "स्थिति",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "ca7ae23566ea415f": {
+      "translation": "स्क्रिप्ट में उपयोग करें",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "1cb2d43271f2ec1d": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "a6f6b2d3b00b064b": {
+      "translation": "--------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "9ccc1d645353758f": {
+      "translation": "----------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "7447966bff9a72c7": {
+      "translation": "सत्यापित",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "68b4d57df0d3d1a5": {
+      "translation": "असत्यापित",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "97230e9975404908": {
+      "translation": "संरचनात्मक रूप से मान्य, सत्यापन नहीं कर सकते",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "ea5ddc3fa61f5d75": {
+      "translation": "टूटा हुआ",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "6eaf44aae4f7e323": {
+      "translation": "छेड़छाड़ का पता चला",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "bee30b6390521d7c": {
+      "translation": "अमान्य इनपुट",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "d7d983eb9fa4f90a": {
+      "translation": "खराब JSON, गलत संस्करण",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "5566e3e1de406ea7": {
+      "translation": "त्रुटि",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "2f65abf2243576ef": {
+      "translation": "रनटाइम विफलता",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "abb619d8b0588257": {
+      "translation": "शुरुआत",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "c601496221a20045": {
+      "translation": "आर्किटेक्चर",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "e5fba9fea0fe4540": {
+      "translation": "क्रिप्टोग्राफिक गारंटी",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "f0f754848190781a": {
+      "translation": "- **हस्ताक्षर**: Ed25519 (RFC 8032) आधिकारिक परीक्षण वैक्टर के साथ\n- **हैशिंग**: सामग्री और इवेंट श्रृंखला के लिए SHA-256\n- **सीरियलाइजेशन**: कैनोनिकल JSON (नियतात्मक, UTF-8, कोई BOM नहीं)\n- **कुंजी भंडारण**: क्रॉस-प्लेटफ़ॉर्म सुरक्षित भंडारण (DPAPI / libsecret / Keychain)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "7c16b17b228eb448": {
+      "translation": "इवेंट श्रृंखला",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "9214c0429bde3205": {
+      "translation": "घटनाएं एक केवल-जोड़ने योग्य श्रृंखला बनाती हैं जहां प्रत्येक घटना में पिछली घटना का हैश शामिल होता है:",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "2e8082763fd4ab20": {
+      "translation": "श्रृंखला को SQLite ट्रिगर्स (कोई UPDATE/DELETE नहीं), `seq` ऑर्डरिंग, `PreviousEventHash` सत्यापन और आशावादी समवर्ती नियंत्रण द्वारा लागू किया जाता है।",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "c64bb4ec32275dce": {
+      "translation": "प्लेटफ़ॉर्म समर्थन",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "b6fa9d5abbaf898a": {
+      "translation": "घटक",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "47d179ae260533c0": {
+      "translation": "विंडोज",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "93023f9472bfa34e": {
+      "translation": "लिनक्स",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "c4fa89b03502916a": {
+      "translation": "macOS",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "03eb21bf393bcd87": {
+      "translation": "-----------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "b6c553de298c0051": {
+      "translation": "हाँ",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "cc96115adc6be533": {
+      "translation": "कोर लाइब्रेरी",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "8fe540aabde0aeb3": {
+      "translation": "सुरक्षित कुंजी भंडारण",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "0c4ed8d2822c1068": {
+      "translation": "DPAPI",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "f15a3610484d276f": {
+      "translation": "libsecret",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "5e0bec37b0cc85ed": {
+      "translation": "Keychain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "e0513a26e56e1df3": {
+      "translation": "प्रलेखन",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "257f8d108b4c861e": {
+      "translation": "- [VERIFICATION.md](VERIFICATION.md) — सत्यापन गाइड\n- [SECURITY_IMPROVEMENTS.md](SECURITY_IMPROVEMENTS.md) — सुरक्षा सुधार विवरण\n- [PUBLISHING_GUIDE.md](PUBLISHING_GUIDE.md) — NuGet प्रकाशन\n- [RELEASE_NOTES_v1.1.0.md](RELEASE_NOTES_v1.1.0.md) — रिलीज़ नोट्स",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "cfbc372f8058f151": {
+      "translation": "लाइसेंस",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "69121a20c478d6f4": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089192165
+    },
+    "5d66339d14199438": {
+      "translation": "**Tracciabilità crittografica locale per asset digitali. Dimostra chi ha creato cosa e quando, con firme Ed25519, catene di eventi a sola aggiunta e ancoraggio opzionale alla blockchain. Non è necessaria alcuna soluzione cloud.**",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "2dc88d057af4a8f1": {
+      "translation": "Cosa fa",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "d75b2ee986b6cae6": {
+      "translation": "- **Firma gli asset localmente** — Firme Ed25519 associate all'identità del creatore\n- **Traccia le catene di derivazione** — Scopri quando un'opera deriva da un'altra\n- **Esporta prove autonome** — Pacchetti JSON che verificano senza alcun database\n- **Ancora alla blockchain** — Timestamping opzionale per prove di valore legale",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "ff5580523b6052cc": {
+      "translation": "Installazione",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "d4c1aefbadb8ac5e": {
+      "translation": "Livelli di fiducia",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "671817612b81bf95": {
+      "translation": "Livello",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "69fb964a4ef1e52e": {
+      "translation": "Significato",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "4f16a25e942668c8": {
+      "translation": "-------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "859008cc19c8d7e4": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "d6f2a91f4b5a02a5": {
+      "translation": "Firmato e ancorato alla blockchain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "d101a496569293ba": {
+      "translation": "Firma valida, ma non ancora ancorata",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "38af06f7fe64f0c5": {
+      "translation": "Opera firmata derivata da un'altra opera firmata",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "9083c478cb8d9cee": {
+      "translation": "Nessuna attestazione trovata",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "b7786e4d76e84a72": {
+      "translation": "Firma non valida o contenuto modificato",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "1ca016c55ba94bc9": {
+      "translation": "Verificatore CLI",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "5349357724609283": {
+      "translation": "Verifica i pacchetti di prova senza alcuna infrastruttura:",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "84b4e4ea8e580337": {
+      "translation": "Codici di uscita",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "d397d70da782c4bd": {
+      "translation": "Codice",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "dcc569eca4c93eef": {
+      "translation": "Stato",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "772d3240e36d5a9b": {
+      "translation": "Utilizzo negli script",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "a8e2cbb75c81ee97": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "52634ac8aa73733d": {
+      "translation": "--------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "c066c2348b3c04a5": {
+      "translation": "----------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "3f527726a8217958": {
+      "translation": "Verificato",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "b82b8c0eb2c15100": {
+      "translation": "Non verificato",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "da3571943799eb2c": {
+      "translation": "Strutturalmente valido, impossibile verificare",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "0de1a03afe7c9a5a": {
+      "translation": "Corrotto",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "d73ef16cae669438": {
+      "translation": "Manomissione rilevata",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "da83ed3141bdfbc8": {
+      "translation": "Input non valido",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "fd1a0c6c7d2082a7": {
+      "translation": "JSON non valido, versione errata",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "2179ad17e5404a7c": {
+      "translation": "Errore",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "17e41c4915225b58": {
+      "translation": "Errore durante l'esecuzione",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "d7e9780fb2074bec": {
+      "translation": "Guida introduttiva",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "2467ff9891958ea0": {
+      "translation": "Architettura",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "351543705c4246cb": {
+      "translation": "Garanzie crittografiche",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "cfd084bcce8b63c8": {
+      "translation": "- **Firme**: Ed25519 (RFC 8032) con vettori di test ufficiali\n- **Hashing**: SHA-256 per contenuto e catena di eventi\n- **Serializzazione**: JSON canonico (deterministico, UTF-8, senza BOM)\n- **Archiviazione delle chiavi**: Archiviazione sicura multipiattaforma (DPAPI / libsecret / Keychain)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "c0d175710a32eb76": {
+      "translation": "Catena di eventi",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "10735b1096c5bcf5": {
+      "translation": "Gli eventi formano una catena a sola aggiunta in cui ogni evento include l'hash del precedente:",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "55244f99615f4dc2": {
+      "translation": "La catena è applicata tramite trigger di SQLite (nessun UPDATE/DELETE), ordinamento `seq`, verifica `PreviousEventHash` e controllo di concorrenza ottimistico.",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "7b5b42032d30da5e": {
+      "translation": "Supporto per piattaforme",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "0c066004c2d3f189": {
+      "translation": "Componente",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "cbaf620b2da20e46": {
+      "translation": "Windows",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "9429c0c4a2a13d82": {
+      "translation": "Linux",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "8bbbd303b1cb17f9": {
+      "translation": "macOS",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "b7dd8da33d76c15e": {
+      "translation": "-----------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "892561af9026f298": {
+      "translation": "Sì",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "10de222d05714379": {
+      "translation": "Libreria principale",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "a384f3c19f8b6147": {
+      "translation": "Archiviazione sicura delle chiavi",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "cf031d1d20347c99": {
+      "translation": "DPAPI",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "df8c0de18c9e187c": {
+      "translation": "libsecret",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "a4e7600a8327d929": {
+      "translation": "Keychain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "2cebf666d270d0e8": {
+      "translation": "Documentazione",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "53ede2ccebd5cc0e": {
+      "translation": "- [VERIFICATION.md](VERIFICATION.md) — Guida alla verifica\n- [SECURITY_IMPROVEMENTS.md](SECURITY_IMPROVEMENTS.md) — Dettagli sul miglioramento della sicurezza\n- [PUBLISHING_GUIDE.md](PUBLISHING_GUIDE.md) — Pubblicazione NuGet\n- [RELEASE_NOTES_v1.1.0.md](RELEASE_NOTES_v1.1.0.md) — Note di rilascio",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "0870aa1dcfea97cc": {
+      "translation": "Licenza",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "c87c0c0fca261018": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089225634
+    },
+    "4994b7a7a48ef6a6": {
+      "translation": "**Rastreabilidade criptográfica local para ativos digitais. Comprova quem criou o quê e quando, com assinaturas Ed25519, cadeias de eventos somente para adição e ancoragem opcional em blockchain. Não requer nuvem.**",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "ef1986c4e1b8eee6": {
+      "translation": "O que ele faz",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "819310be6faf790c": {
+      "translation": "- **Assine ativos localmente** — Assinaturas Ed25519 vinculadas à identidade do criador.\n- **Rastreie cadeias de derivação** — Saiba quando um trabalho é derivado de outro.\n- **Exporte provas autônomas** — Pacotes JSON que verificam sem nenhum banco de dados.\n- **Ancore no blockchain** — Marcação de tempo opcional para evidências de qualidade jurídica.",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "4898ae5813bd2bb7": {
+      "translation": "Instalação",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "2068ddf37676cafa": {
+      "translation": "Níveis de Confiança",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "c2da9028a3bb20e8": {
+      "translation": "Nível",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "47d1e04b68b670ac": {
+      "translation": "Significado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "1f04ef9e8cc1d860": {
+      "translation": "-------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "eeb243aa53a24f8e": {
+      "translation": "---------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "744c9975685f3c97": {
+      "translation": "Assinado + ancorado no blockchain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "07d1031759966e6c": {
+      "translation": "Assinatura válida, ainda não ancorada",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "620877e1065e85b9": {
+      "translation": "Trabalho assinado derivado de outro trabalho assinado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "73c37d3b4f3207ff": {
+      "translation": "Nenhuma atestação encontrada",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "07666fa2ed84178e": {
+      "translation": "Assinatura inválida ou conteúdo modificado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "8b42dd75ec67d688": {
+      "translation": "Verificador de Linha de Comando (CLI)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "307e4ea2c7139b70": {
+      "translation": "Verifique pacotes de prova sem nenhuma infraestrutura:",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "18d31170dcf1f21d": {
+      "translation": "Códigos de Saída",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "cba4088ba279e678": {
+      "translation": "Código",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "7531057f66c85d76": {
+      "translation": "Status",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "13bc9828e8084372": {
+      "translation": "Uso em scripts",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "93982127e708d976": {
+      "translation": "------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "da4f8834bba48670": {
+      "translation": "--------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "86019deb0f1fcaa1": {
+      "translation": "----------------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "1d851e0924fd4263": {
+      "translation": "Verificado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "cfb33792eace0726": {
+      "translation": "Não verificado",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "94d14da1c69bd5c7": {
+      "translation": "Estruturalmente válido, não é possível verificar",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "ebeaf9914240b79e": {
+      "translation": "Corrompido",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "b7d3bd8823399e6e": {
+      "translation": "Detecção de adulteração",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "8d76ad031cbd529f": {
+      "translation": "Entrada inválida",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "a569c431efafe385": {
+      "translation": "JSON inválido, versão errada",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "fb3f3399c47ac514": {
+      "translation": "Erro",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "5096c552581f03a9": {
+      "translation": "Falha em tempo de execução",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "c88bcdb0dd505b6b": {
+      "translation": "Início Rápido",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "57a87b809fa8de1a": {
+      "translation": "Arquitetura",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "515ae38d5fcdfc1c": {
+      "translation": "Garantias Criptográficas",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "fef3f9138921d595": {
+      "translation": "- **Assinaturas**: Ed25519 (RFC 8032) com vetores de teste oficiais.\n- **Hashing**: SHA-256 para conteúdo e cadeia de eventos.\n- **Serialização**: JSON canônico (determinístico, UTF-8, sem BOM).\n- **Armazenamento de chaves**: Armazenamento seguro multiplataforma (DPAPI / libsecret / Keychain).",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "2472049bc8f709fe": {
+      "translation": "Cadeia de Eventos",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "cc71d2276e7dabb4": {
+      "translation": "Os eventos formam uma cadeia somente para adição, onde cada evento inclui o hash do evento anterior:",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "21c886a51eb0541c": {
+      "translation": "A cadeia é imposta por gatilhos do SQLite (sem UPDATE/DELETE), ordenação `seq`, verificação `PreviousEventHash` e controle de concorrência otimista.",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "ae10c7bc42212a99": {
+      "translation": "Suporte à Plataforma",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "6359f9d115e89dea": {
+      "translation": "Componente",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "c5eefcbd589c8928": {
+      "translation": "Windows",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "d3bb4cff937c0a26": {
+      "translation": "Linux",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "4159e8de2c7b0ec3": {
+      "translation": "macOS",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "d94afbcff5759c30": {
+      "translation": "-----------",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "dad970b4ff1d0d03": {
+      "translation": "Sim",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "ab85d647a74de99c": {
+      "translation": "Biblioteca Central",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "932137136b19b372": {
+      "translation": "Armazenamento Seguro de Chaves",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "d85daeb3dbddda41": {
+      "translation": "DPAPI",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "e71f2ec1bf508a70": {
+      "translation": "libsecret",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "d9791ea9f2bd6482": {
+      "translation": "Keychain",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "5da143a95bd4adb3": {
+      "translation": "Documentação",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "a84d945703cba8f7": {
+      "translation": "- [VERIFICATION.md](VERIFICATION.md) — Guia de verificação\n- [SECURITY_IMPROVEMENTS.md](SECURITY_IMPROVEMENTS.md) — Detalhes de fortalecimento de segurança\n- [PUBLISHING_GUIDE.md](PUBLISHING_GUIDE.md) — Publicação NuGet\n- [RELEASE_NOTES_v1.1.0.md](RELEASE_NOTES_v1.1.0.md) — Notas da versão",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "2aca9b0e72841008": {
+      "translation": "Licença",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    },
+    "8026854d56a5486a": {
+      "translation": "[MIT](LICENSE)",
+      "model": "translategemma:12b",
+      "timestamp": 1772089260159
+    }
+  }
+}
